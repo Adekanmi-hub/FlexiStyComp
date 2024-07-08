@@ -5,7 +5,7 @@ export const StyledButton = styled.button`
   background-color: ${(props) =>
     props.variant === "outline" ? "#fff" : "#4caf50"};
   color: ${(props) => (props.variant === "outline" ? "#4caf50" : "white")};
-  padding: 15px 32px;
+  padding: 10px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -27,6 +27,8 @@ export const FancyButton = styled(StyledButton)`
 export const SubmitButton = styled(StyledButton).attrs({
   type: "submit",
 })`
+  width: 100%;
+  border-radius: 5px;
   &:active {
     background-color: ${(props) =>
       props.variant !== "outline" ? "#fff" : "#4caf50"};

@@ -1,26 +1,15 @@
 import "./App.css";
-import StyledButton, {
-  FancyButton,
-  SubmitButton,
-} from "./components/button/Button"; //step 1
+import { columns, data } from "./components/table/Data";
+import Table from "./components/table/Table";
+import Form from "./pages/Form";
 
 function App() {
   return (
-    <div className="App">
-      {/* <button>Button</button> */}
-      <StyledButton type="submit">Styled Button</StyledButton>
-      <div>
-        <br />
-      </div>
-      <StyledButton variant="outline">Styled Button</StyledButton>
-      <div>
-        <br />
-      </div>
-      <FancyButton as="a">Fancy Button</FancyButton>
-      <div>
-        <br />
-      </div>
-      <SubmitButton>Submit</SubmitButton>
+    <div>
+      <Form />
+      <Form />
+      <Table data={data} columns={columns} />
+      <Table data={data} columns={columns} />
     </div>
   );
 }
